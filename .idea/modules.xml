@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyGreenDAO.iml" filepath="$PROJECT_DIR$/MyGreenDAO.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SQLiteDB/SQLiteDB.iml" filepath="$PROJECT_DIR$/SQLiteDB/SQLiteDB.iml" />
       <module fileurl="file://$PROJECT_DIR$/daoexamplegenerator/daoexamplegenerator.iml" filepath="$PROJECT_DIR$/daoexamplegenerator/daoexamplegenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/v_1.3.7/v_1.3.7.iml" filepath="$PROJECT_DIR$/v_1.3.7/v_1.3.7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/v_3.0/v_3.0.iml" filepath="$PROJECT_DIR$/v_3.0/v_3.0.iml" />
     </modules>
   </component>
 </project>

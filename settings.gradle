@@ -1,1 +1,2 @@
-include ':app', ':daoexamplegenerator'
+include ':v_1.3.7', ':daoexamplegenerator', ':v_3.0'
+include ':SQLiteDB'
