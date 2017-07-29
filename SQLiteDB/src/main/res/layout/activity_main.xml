@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hao.sqlite.MainActivity" >
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="2dp"
+        android:onClick="createDatabase"
+        android:text="Create database" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCreate"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="2dp"
+        android:onClick="addData"
+        android:text="Add data" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnAdd"
+        android:layout_below="@+id/btnAdd"
+        android:layout_margin="2dp"
+        android:onClick="deleteData"
+        android:text="Delete data" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnQuery"
+        android:layout_below="@+id/btnDelete"
+        android:layout_margin="2dp"
+        android:layout_marginTop="62dp"
+        android:onClick="updateData"
+        android:text="Update data" />
+
+    <Button
+        android:id="@+id/btnQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnUpdate"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="2dp"
+        android:onClick="queryData"
+        android:text="Query data" />
+    
+     <Button
+        android:id="@+id/btnReplaceData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnQuery"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="2dp"
+        android:onClick="replaceData"
+        android:text="Replace data" />
+
+</RelativeLayout>
