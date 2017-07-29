@@ -1,4 +1,4 @@
-package com.example.sqlitebestdemo.dao;
+package com.hao.sqlite.dao;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.example.sqlitebestdemo.dao;
+package com.hao.sqlite.dao;
 
-import com.example.sqlitebestdemo.bean.Book;
+import com.hao.sqlite.bean.Book;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.sqlitebestdemo.bean;
+package com.hao.sqlite.bean;
 
 /**
  * Desc:
