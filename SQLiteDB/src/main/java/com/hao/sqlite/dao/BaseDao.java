@@ -7,10 +7,10 @@ import java.util.List;
  * Created by huanghao123 on 7/29 0029.
  */
 public interface BaseDao<T> {
-    boolean addRecord(T record);
-    boolean deleteRecord(T record);
-    boolean updateRecord(T record);
-    T getRecord(String... conditions);
-    List<T> getAllRecords();
-    List<T> getRecords(String... conditions);
+    boolean insert(T record);
+    boolean delete(String id);
+    boolean update(T record);
+    T query(String condition);
+    List<T> query(String... conditions);
+    List<T> queryAll();
 }

@@ -7,7 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 
-import com.hao.sqlite.sqlitehelper.MyDatabaseHelper;
+import com.hao.sqlite.sqlitehelper.DBOpenHelper;
 
 public class MyProvider extends ContentProvider {
 	public static final int BOOK_DIR=0;
@@ -19,7 +19,7 @@ public class MyProvider extends ContentProvider {
 	
 	private static UriMatcher uriMatcher;
 	
-	private MyDatabaseHelper mHelper;
+	private DBOpenHelper mHelper;
 	
 	/**
 	 * 初始化这个自定义内容提供器
@@ -39,7 +39,7 @@ public class MyProvider extends ContentProvider {
 	 */
 	@Override
 	public boolean onCreate() {
-		mHelper=new MyDatabaseHelper(getContext(), "bookstore.db", null, 3);
+		mHelper=new DBOpenHelper(getContext(), "bookstore.db", null, 3);
 		return true;
 	}
 	/**
