@@ -5,12 +5,11 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/SQLiteDB" />
-            <option value="$PROJECT_DIR$/daoexamplegenerator" />
+            <option value="$PROJECT_DIR$/daogenerator" />
             <option value="$PROJECT_DIR$/v_1.3.7" />
             <option value="$PROJECT_DIR$/v_3.0" />
           </set>

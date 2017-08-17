@@ -1,4 +1,4 @@
-package com.hao.sqlite.dao;
+package com.hao.sqlite.dao.impl;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,6 +7,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.hao.sqlite.bean.Category;
+import com.hao.sqlite.dao.BaseDao;
 import com.hao.sqlite.sqlitehelper.DBOpenHelper;
 import com.hao.sqlite.table.CategoryTable;
 
@@ -124,5 +125,9 @@ public class CategoryDao implements BaseDao<Category> {
     public List<Category> query(String... conditions) {
 
         return null;
+    }
+
+    public void closeHelper(){
+        this.helper.close();
     }
 }

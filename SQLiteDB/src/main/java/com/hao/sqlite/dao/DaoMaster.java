@@ -2,6 +2,8 @@ package com.hao.sqlite.dao;
 
 import android.content.Context;
 
+import com.hao.sqlite.dao.impl.BookDao;
+import com.hao.sqlite.dao.impl.CategoryDao;
 import com.hao.sqlite.sqlitehelper.DBOpenHelper;
 
 /**

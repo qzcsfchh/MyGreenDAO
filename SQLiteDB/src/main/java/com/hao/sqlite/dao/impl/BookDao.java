@@ -1,8 +1,9 @@
-package com.hao.sqlite.dao;
+package com.hao.sqlite.dao.impl;
 
 import android.content.Context;
 
 import com.hao.sqlite.bean.Book;
+import com.hao.sqlite.dao.BaseDao;
 import com.hao.sqlite.sqlitehelper.DBOpenHelper;
 
 import java.util.List;
