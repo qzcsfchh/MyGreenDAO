@@ -11,6 +11,7 @@ import com.hao.sqlite.dao.BaseDao;
 import com.hao.sqlite.sqlitehelper.DBOpenHelper;
 import com.hao.sqlite.table.CategoryTable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -77,9 +78,9 @@ public class CategoryDao implements BaseDao<Category> {
     @Override
     public boolean delete(String id) {
         SQLiteDatabase db = helper.getWritableDatabase();
-        db.delete(CategoryTable.TABLE_NAME,CategoryTable.Columns.ID+"=?",new String[]{id});
+        int i = db.delete(CategoryTable.TABLE_NAME, CategoryTable.Columns.ID + "=?", new String[]{id});
         db.close();
-        return false;
+        return i>0;
     }
 
     @Override
@@ -93,7 +94,7 @@ public class CategoryDao implements BaseDao<Category> {
     @Override
     public Category query(String id) {
         Category category=null;
-        SQLiteDatabase db = helper.getWritableDatabase();
+        SQLiteDatabase db = helper.getReadableDatabase();
         Cursor cursor = db.query(CategoryTable.TABLE_NAME, null, CategoryTable.Columns.ID + "=?", new String[]{id}, null, null, null);
         if (cursor.moveToFirst()) {
             category=new Category();
@@ -101,6 +102,7 @@ public class CategoryDao implements BaseDao<Category> {
             category.setCategoryName(cursor.getString(cursor.getColumnIndex(CategoryTable.Columns.CATEGORY_NAME)));
             category.setCategoryCode(cursor.getColumnIndex(CategoryTable.Columns.CATEGORY_CODE));
         }
+        cursor.close();
         db.close();
         return category;
     }
@@ -108,7 +110,7 @@ public class CategoryDao implements BaseDao<Category> {
     @Override
     public List<Category> queryAll() {
         List<Category> categories=null;
-        SQLiteDatabase db = helper.getWritableDatabase();
+        SQLiteDatabase db = helper.getReadableDatabase();
         Cursor cursor = db.query(CategoryTable.TABLE_NAME, null, null, null, null, null, null);
         while (cursor.moveToNext()) {
             Category category=new Category();
@@ -117,8 +119,39 @@ public class CategoryDao implements BaseDao<Category> {
             category.setCategoryCode(cursor.getColumnIndex(CategoryTable.Columns.CATEGORY_CODE));
             categories.add(category);
         }
+        cursor.close();
         db.close();
         return categories;
+    }
+
+    @Override
+    public List<Category> queryBatch(int offset, int limit) {
+        String sql="select "+CategoryTable.Columns.CATEGORY_NAME+","+CategoryTable.Columns.CATEGORY_CODE+
+                " from "+CategoryTable.TABLE_NAME+" order by "+CategoryTable.Columns.ID+"desc limit ? offset ?";
+        SQLiteDatabase db = helper.getReadableDatabase();
+        List<Category> res=new ArrayList<>();
+        Cursor cursor = db.rawQuery(sql, new String[]{String.valueOf(limit),String.valueOf(offset)});
+        while (cursor.moveToNext()) {
+            Category category=new Category();
+            category.setCategoryCode(cursor.getInt(0));
+            category.setCategoryName(cursor.getString(1));
+            res.add(category);
+        }
+        cursor.close();
+        db.close();
+        return res;
+    }
+
+    @Override
+    public int getTotalCount() {
+        String sql="select count(*) from "+CategoryTable.TABLE_NAME;
+        SQLiteDatabase db = helper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToNext();
+        int res = cursor.getInt(0);
+        db.close();
+        cursor.close();
+        return res;
     }
 
     @Override

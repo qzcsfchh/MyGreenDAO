@@ -20,6 +20,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        greendao {
+            /* 如果不卸载应用而改变数据库表，需要更新这里的数据库版本 */
+            schemaVersion 1
+        }
     }
 }
 
@@ -28,9 +33,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    compile 'org.greenrobot:greendao:3.2.2' // add library
-    compile 'net.zetetic:android-database-sqlcipher:3.5.6'  //加密数据库
+    compile 'com.android.support:support-v4:25.3.1'
+
+    // add library
+    compile 'org.greenrobot:greendao:3.2.2'
+    //加密数据库
+    compile 'net.zetetic:android-database-sqlcipher:3.5.6'
 }

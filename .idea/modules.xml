@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/MyGreenDAO.iml" filepath="$PROJECT_DIR$/MyGreenDAO.iml" />
       <module fileurl="file://$PROJECT_DIR$/SQLiteDB/SQLiteDB.iml" filepath="$PROJECT_DIR$/SQLiteDB/SQLiteDB.iml" />
       <module fileurl="file://$PROJECT_DIR$/daogenerator/daogenerator.iml" filepath="$PROJECT_DIR$/daogenerator/daogenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/v3.2/v3.2.iml" filepath="$PROJECT_DIR$/v3.2/v3.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/v3.2_rx/v3.2_rx.iml" filepath="$PROJECT_DIR$/v3.2_rx/v3.2_rx.iml" />
       <module fileurl="file://$PROJECT_DIR$/v_1.3.7/v_1.3.7.iml" filepath="$PROJECT_DIR$/v_1.3.7/v_1.3.7.iml" />
       <module fileurl="file://$PROJECT_DIR$/v_3.0/v_3.0.iml" filepath="$PROJECT_DIR$/v_3.0/v_3.0.iml" />
     </modules>

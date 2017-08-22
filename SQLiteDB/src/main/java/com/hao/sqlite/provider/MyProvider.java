@@ -39,7 +39,7 @@ public class MyProvider extends ContentProvider {
 	 */
 	@Override
 	public boolean onCreate() {
-		mHelper=new DBOpenHelper(getContext(), "bookstore.db", null, 3);
+		mHelper=new DBOpenHelper(getContext());
 		return true;
 	}
 	/**

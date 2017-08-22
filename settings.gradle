@@ -1,2 +1,2 @@
-include ':v_1.3.7', ':daogenerator', ':v_3.0'
+include ':v_1.3.7', ':daogenerator', ':v_3.0', ':v3.2', ':v3.2_rx'
 include ':SQLiteDB'

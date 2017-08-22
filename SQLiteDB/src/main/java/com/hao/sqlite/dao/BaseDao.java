@@ -13,4 +13,11 @@ public interface BaseDao<T> {
     T query(String condition);
     List<T> query(String... conditions);
     List<T> queryAll();
+    List<T> queryBatch(int offset, int limit);
+
+    /**
+     * 获取数据库中的数据总量
+     * @return
+     */
+    int getTotalCount();
 }

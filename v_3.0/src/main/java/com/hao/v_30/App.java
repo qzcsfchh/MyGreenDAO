@@ -21,6 +21,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         instance=this;
+//        GreenDaoHelper.init(this,ENCRYPTED);
         DaoMaster.DevOpenHelper devOpenHelper = new DaoMaster.DevOpenHelper(this, "user-db");
         Database database=ENCRYPTED?devOpenHelper.getEncryptedWritableDb("password"):devOpenHelper.getWritableDb();
         daoSession=new DaoMaster(database).newSession();

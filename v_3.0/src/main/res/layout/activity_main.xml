@@ -1,49 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="com.hao.v_30.MainActivity">
+    tools:context="com.hao.v_30.MainActivity">
 
-    <LinearLayout
-        android:id="@+id/input_zone"
-        android:orientation="horizontal"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/name"
-            android:hint="name"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:id="@+id/age"
-            android:hint="age"
-            android:inputType="numberDecimal"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:id="@+id/key"
-            android:hint="key"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
+        <android.support.v4.view.PagerTabStrip
 
-    </LinearLayout>
-    <Button
-        android:id="@+id/btn_submit"
-        android:layout_below="@id/input_zone"
-        android:text="submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </android.support.v4.view.ViewPager>
 
-    <ListView
-        android:id="@+id/list_view"
-        android:layout_below="@id/btn_submit"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-</RelativeLayout>
+</LinearLayout>

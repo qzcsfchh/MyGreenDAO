@@ -1,4 +1,4 @@
-package com.hao.v_30;
+package com.hao.v_30.adapter;
 
 import android.content.Context;
 import android.support.annotation.LayoutRes;
@@ -27,6 +27,10 @@ public class UserAdapter extends BaseAdapter {
 
     public void setUsers(List<User> users) {
         this.mUsers = users;
+    }
+
+    public List<User> getUsers(){
+        return mUsers;
     }
 
     public UserAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<User> objects) {
